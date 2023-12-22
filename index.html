@@ -11,9 +11,20 @@
       <div class="blur">
         <form class="box">
           <h1>Login</h1>
-          <div>
-            <input type="text" class="input" placeholder="Username" />
-            <input type="password" class="input" placeholder="password" />
+          <div class="input-filds">
+            <label class="label">
+              <input type="email" class="input" placeholder="Username" />
+              <img src="./assets/user-solid.svg" class="icon" />
+            </label>
+            <label class="label">
+              <input
+                type="password"
+                class="input"
+                placeholder="password"
+                id="password"
+              />
+              <img src="./assets/eye-slash-solid.svg" alt="" id="togglePassword" />
+            </label>
             <div class="remFor">
               <span>
                 <input type="checkbox" name="" id="remember" />
@@ -29,5 +40,25 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function () {
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        if (type === "text"){
+          togglePassword.src = "./assets/eye-solid.svg"
+        } else{
+          togglePassword.src = "./assets/eye-slash-solid.svg"
+        }
+      });
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
