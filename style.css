@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: sepia(90%);
+}
+.container h1 {
+  color: white;
+}
+.blur {
+  width: 350px;
+  background: rgba(24, 24, 24, 0.312);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  border: 1px solid rgba(245, 222, 179, 0.5);
+  border-radius: 6px;
+}
+.box {
+  padding: 50px 0px;
+}
+
+.input {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  background: transparent;
+  border: 1px solid rgba(245, 222, 179, 0.9);
+  outline: none;
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 50px;
+  color: white;
+  cursor: text;
+}
+.input::placeholder {
+  color: white;
+  font-size: 17px;
+}
+.remFor {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-top: 8px;
+  color: white;
+}
+.remFor input[type="checkbox"] {
+  accent-color: #fff;
+}
+.remFor span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+.remFor span a:hover {
+  text-decoration: underline;
+}
+.button {
+  background: #fff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.box p {
+  color: #fff;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.box p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.box p a:hover {
+  text-decoration: underline;
+}
